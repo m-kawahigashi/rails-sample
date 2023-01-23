@@ -1,0 +1,19 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+
+llCops:
+  TargetRubyVersion: 2.5.3
+  # 自動生成されたファイルを規約の調査から除外
+  # デフォルト設定にある"vendor/**/*"が無効化されないように記述
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - node_modules/**/*
+    - db/migrate/*
+    - vendor/**/*
+
+# 日本語でのコメントを許可する
+AsciiComments:
+  Enabled: false
